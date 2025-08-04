@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bguiblue">
+
+    <!-- Greeting Text -->
+    <TextView
+        android:id="@+id/greeting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hey there!!"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="75dp"
+        android:layout_marginStart="20dp" />
+
+    <!-- Sub Greeting -->
+    <TextView
+        android:id="@+id/sub_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What Would you like to learn Today?\nSearch Below."
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/greeting_text"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="20dp" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="Search for.."
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:layout_below="@id/sub_greeting"
+        android:background="@drawable/rounded_button_white" />
+
+    <!-- Categories Title -->
+    <TextView
+        android:id="@+id/categories_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/search_bar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- See All Button -->
+    <TextView
+        android:id="@+id/see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEE ALL"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_alignTop="@id/categories_title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp" />
+
+    <!-- ScrollView Grid -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categories_title"
+        android:layout_marginTop="16dp"
+        android:layout_above="@+id/bottom_nav">
+
+        <GridLayout
+            android:id="@+id/categories_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="16dp"
+            android:useDefaultMargins="true">
+
+            <!-- Category 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/v"
+                    android:scaleType="fitCenter" />
+                <TextView
+                    android:text="Vocal Training"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"  android:layout_height="20dp" android:layout_width="100dp"/>
+            </LinearLayout>
+
+            <!-- Category 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/i"
+                    android:scaleType="fitCenter" />
+                <TextView
+                    android:text="Instrumental Music"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"  android:layout_height="50dp" android:layout_width="100dp"/>
+            </LinearLayout>
+
+            <!-- Category 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/m"
+                    android:scaleType="fitCenter" />
+                <TextView
+                    android:text="Music Theory, Improvisation"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_height="50dp" android:layout_width="100dp" android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- Category 4 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/p"
+                    android:scaleType="fitCenter" />
+                <TextView
+                    android:text="Performance, Development"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_height="50dp" android:layout_width="100dp" android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- Category 5 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/c"
+                    android:scaleType="fitCenter" />
+                <TextView
+                    android:text="Certification, Masterclasses"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_height="50dp" android:layout_width="100dp" android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- Category 6 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/b"
+                    android:scaleType="fitCenter" />
+                <TextView
+                    android:text="Bhakti, Devotional Music"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_height="50dp" android:layout_width="100dp" android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- Category 7 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/f"
+                    android:scaleType="fitCenter" />
+                <TextView
+                    android:text="Fusion, Experimental Music"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_height="50dp" android:layout_width="100dp" android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- Category 8 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/k"
+                    android:scaleType="fitCenter" />
+                <TextView
+                    android:text="Kid's Special Music Training"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_height="50dp" android:layout_width="100dp" android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </GridLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ic_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home"
+            android:padding="16dp"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/ic_courses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_courses"
+            android:contentDescription="Courses"
+            android:padding="16dp"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/ic_inbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_inbox"
+            android:contentDescription="Inbox"
+            android:padding="16dp"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/ic_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Profile"
+            android:padding="16dp"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+</RelativeLayout>
