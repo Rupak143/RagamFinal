@@ -78,7 +78,7 @@
                     android:paddingStart="12dp">
 
                     <TextView
-                        android:text="Guru Sri. Raghunathan Iyer"
+                        android:text="Rupak Varma"
                         android:textStyle="bold"
                         android:textSize="14sp"
                         android:textColor="@android:color/black"
@@ -117,17 +117,7 @@
             android:layout_weight="1"
             android:src="@drawable/ic_home"
             android:contentDescription="Home"
-            android:padding="16dp"
-            android:scaleType="centerInside" />
-
-        <ImageView
-            android:id="@+id/ic_courses"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_courses"
-            android:contentDescription="Courses"
-            android:padding="16dp"
+            android:padding="10dp"
             android:scaleType="centerInside" />
 
         <ImageView
@@ -137,7 +127,7 @@
             android:layout_weight="1"
             android:src="@drawable/ic_inbox"
             android:contentDescription="Inbox"
-            android:padding="16dp"
+            android:padding="10dp"
             android:scaleType="centerInside" />
 
         <ImageView
@@ -147,7 +137,7 @@
             android:layout_weight="1"
             android:src="@drawable/ic_profile"
             android:contentDescription="Profile"
-            android:padding="16dp"
+            android:padding="10dp"
             android:scaleType="centerInside" />
     </LinearLayout>
 </RelativeLayout>
